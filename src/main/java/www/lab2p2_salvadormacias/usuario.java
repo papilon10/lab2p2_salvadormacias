@@ -47,6 +47,10 @@ public class usuario {
         this.tipo = tipo;
     }
 
+    public boolean verify(String usuario, String contrasena, String tipoUsuario) {
+        return this.nombre.equals(usuario) && this.contrasena.equals(contrasena) && this.tipo.equalsIgnoreCase(tipoUsuario);
+    }
+
     @Override
     public String toString() {
         return "usuario{" + "nombre=" + nombre + ", contrasena=" + contrasena + ", tipo=" + tipo + '}';
