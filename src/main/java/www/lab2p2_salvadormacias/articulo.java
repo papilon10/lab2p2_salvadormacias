@@ -16,12 +16,12 @@ public class articulo {
     String autor;
     String tema;
     Date publicacion;
-    boolean acceso;
+    String acceso;
 
     public articulo() {
     }
 
-    public articulo(String titulo, String autor, String tema, Date publicacion, boolean acceso) {
+    public articulo(String titulo, String autor, String tema, Date publicacion, String acceso) {
         this.titulo = titulo;
         this.autor = autor;
         this.tema = tema;
@@ -61,11 +61,11 @@ public class articulo {
         this.publicacion = publicacion;
     }
 
-    public boolean isAcceso() {
+    public String isAcceso() {
         return acceso;
     }
 
-    public void setAcceso(boolean acceso) {
+    public void setAcceso(String acceso) {
         this.acceso = acceso;
     }
 
