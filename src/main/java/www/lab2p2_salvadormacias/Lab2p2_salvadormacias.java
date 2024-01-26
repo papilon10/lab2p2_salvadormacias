@@ -29,8 +29,19 @@ public class Lab2p2_salvadormacias {
         do {
             switch (opcion) {
                 case 1: {
+                    if (inventario.isEmpty()) {
+                        System.out.println("el inventario no cuenta con recursos...");
 
-                }
+                    } else {
+                        for (int i = 0; i < inventario.size(); i++) {
+                            System.out.println(
+                                    inventario.indexOf(inventario.get(i)) + "-"
+                                    + inventario.get(i)
+                            );
+
+                        }
+                    }//fin if
+                }//fin listar
                 break;
 
                 case 2: {
@@ -95,7 +106,6 @@ public class Lab2p2_salvadormacias {
                                 System.out.println("Ingrese la plataforma de ensenanza: ");
                                 String plataforma = str.nextLine();
                                 inventario.add(new curso(titulo, instructor, duracion, plataforma));
-                                
 
                             }//fin case curso
                             break;
@@ -104,8 +114,8 @@ public class Lab2p2_salvadormacias {
                                 System.out.println("Ingrese el titulo: ");
                                 String titulo = str.nextLine();
                                 System.out.println("Ingrese el conferencista : ");
-                                String conferencista  = str.nextLine();
-                                 System.out.println("Ingrese la fecha de la conferencia en formato dd/MM/yyyy: ");
+                                String conferencista = str.nextLine();
+                                System.out.println("Ingrese la fecha de la conferencia en formato dd/MM/yyyy: ");
                                 String fechaString = str.nextLine();
 
                                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
@@ -117,7 +127,6 @@ public class Lab2p2_salvadormacias {
                                 } catch (ParseException e) {
                                     System.out.println("la fecha fue ingresada en un formato invalido ");
                                 }
-                                
 
                             }//fin case conferencia
                             break;
